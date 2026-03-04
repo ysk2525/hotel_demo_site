@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="rooms-hero fade-in">
+    <img src="{{ url_for('static', filename='zekkei.jpg') }}" alt="客室フロア">
+    <div class="hero-text">
+        <h2>私だけの、隠れ家。</h2>
+    </div>
+</div>
+
+<section class="section fade-in">
+    <span class="sub-title">GUEST ROOMS</span>
+    <h2 class="section-title">客室のご案内</h2>
+    <p>日常の喧騒を離れ、ただ静寂と景色に身を委ねる。<br>趣の異なる7つの空間をご用意いたしました。</p>
+
+    <h3 class="category-label">SUITES</h3>
+    <div class="room-grid">
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80"></div>
+            <div class="room-info">
+                <h3>Royal Suite</h3>
+                <p class="room-spec">120㎡ / 最上階 / 展望ジャグジー付</p>
+                <p>当ホテルの最高峰。水平線と一体化するような開放感をご堪能ください。</p>
+                <div style="margin-top: 20px;">
+                    <a href="/reserve?room=ロイヤルスイート" class="btn-gold-sm">この部屋を予約する</a>
+                </div>
+            </div>
+        </div>
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80"></div>
+            <div class="room-info">
+                <h3>Corner Suite</h3>
+                <p class="room-spec">95㎡ / 角部屋 / 2面採光</p>
+                <p>朝陽と夕陽、両方のドラマチックな変化を楽しめる贅沢なスイートルームです。</p>
+                <div style="margin-top: 20px;">
+                    <a href="/reserve?room=コーナースイート" class="btn-gold-sm">この部屋を予約する</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="category-label">EXECUTIVE</h3>
+    <div class="room-grid">
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1591088398332-8a77d399e843?auto=format&fit=crop&w=800&q=80"></div>
+            <div class="room-info">
+                <h3>Executive King</h3>
+                <p class="room-spec">65㎡ / 高層階</p>
+                <div style="margin-top: 20px;">
+                    <a href="/reserve?room=エグゼクティブキング" class="btn-gold-sm">この部屋を予約する</a>
+                </div>
+            </div>
+        </div>
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80"></div>
+            <div class="room-info">
+                <h3>Executive Twin</h3>
+                <p class="room-spec">60㎡ / 高層階</p>
+                <div style="margin-top: 20px;">
+                    <a href="/reserve?room=エグゼクティブツイン" class="btn-gold-sm">この部屋を予約する</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="category-label">STANDARD</h3>
+    <div class="room-grid triple">
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"></div>
+            <div class="room-info mini">
+                <h3>Deluxe Double</h3>
+                <div style="margin-top: 10px;">
+                    <a href="/reserve?room=デラックスダブル" class="btn-gold-sm">予約</a>
+                </div>
+            </div>
+        </div>
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?auto=format&fit=crop&w=600&q=80"></div>
+            <div class="room-info mini">
+                <h3>Standard Twin</h3>
+                <div style="margin-top: 10px;">
+                    <a href="/reserve?room=スタンダードツイン" class="btn-gold-sm">予約</a>
+                </div>
+            </div>
+        </div>
+        <div class="room-card fade-in">
+            <div class="room-img"><img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=600&q=80"></div>
+            <div class="room-info mini">
+                <h3>Superior Single</h3>
+                <div style="margin-top: 10px;">
+                    <a href="/reserve?room=スーペリアシングル" class="btn-gold-sm">予約</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="booking-concierge fade-in">
+    <div class="concierge-box">
+        <span class="sub-title">CONCIERGE</span>
+        <h2>ご宿泊プラン・お見積り</h2>
+        <div class="calculator-grid">
+            <div class="input-group">
+                <label>お部屋のタイプ</label>
+                <select id="room-select">
+                    <option value="ロイヤルスイート" data-price="120000">Royal Suite</option>
+                    <option value="コーナースイート" data-price="95000">Corner Suite</option>
+                    <option value="エグゼクティブキング" data-price="55000">Executive King</option>
+                    <option value="エグゼクティブツイン" data-price="50000">Executive Twin</option>
+                    <option value="デラックスダブル" data-price="35000">Deluxe Double</option>
+                    <option value="スタンダードツイン" data-price="30000">Standard Twin</option>
+                    <option value="スーペリアシングル" data-price="25000">Superior Single</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>お食事</label>
+                <select id="course-select">
+                    <option value="素泊まり" data-price="0">素泊まり (+¥0)</option>
+                    <option value="朝食付" data-price="4000">朝食付きプラン (+¥4,000)</option>
+                    <option value="特選懐石付" data-price="22000">特選懐石ディナー付 (+¥22,000)</option>
+                </select>
+            </div>
+        </div>
+        <div class="price-display">
+            <p>概算合計金額</p>
+            <h3 id="total-price">¥0</h3>
+            <a id="book-link" href="/reserve" class="btn-gold">この内容で予約へ進む</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="section" style="max-width: 600px;">
+    <h2>ご宿泊予約</h2>
+    <form action="/reserve" method="POST" style="text-align: left;">
+        <label>お名前</label>
+        <input type="text" name="name" required placeholder="例：山田 太郎">
+
+        <label>電話番号</label>
+        <input type="tel" name="phone" required placeholder="例：090-1234-5678">
+
+        <label>メールアドレス</label>
+        <input type="email" name="email" required placeholder="例：sample@example.com">
+
+        <label>チェックイン日時</label>
+        <input type="datetime-local" name="datetime" required>
+
+        <label>ご宿泊部屋</label>
+        <select name="room">
+            <option value="スタンダードツイン" {% if room == 'スタンダードツイン' %}selected{% endif %}>スタンダードツイン</option>
+            <option value="エグゼクティブダブル" {% if room == 'エグゼクティブダブル' %}selected{% endif %}>エグゼクティブダブル</option>
+            <option value="ロイヤルスイート" {% if room == 'ロイヤルスイート' %}selected{% endif %}>ロイヤルスイート</option>
+        </select>
+
+        <label>宿泊コース</label>
+        <select name="course">
+            <option value="素泊まり" {% if course == '素泊まり' %}selected{% endif %}>素泊まり</option>
+            <option value="朝食付きプラン" {% if course == '朝食付きプラン' %}selected{% endif %}>朝食付きプラン</option>
+            <option value="特選フレンチディナー・朝食付き" {% if course == '特選フレンチディナー・朝食付き' %}selected{% endif %}>特選ディナー・朝食付き</option>
+        </select>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="btn-gold">予約を確定する</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

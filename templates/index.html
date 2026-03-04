@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="hero">
+    <div class="hero-inner">
+        <div class="carousel-slide active">
+            <img src="{{ url_for('static', filename='image.png') }}" alt="スタッフの笑顔">
+            <div class="hero-text">
+                <h2>こころゆくまで、優雅に。</h2>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1920&q=80" alt="高級客室">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1920&q=80" alt="大浴場">
+        </div>
+    </div>
+</div>
+
+<section class="story-section fade-in">
+    <div class="story-container">
+        <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="夕景">
+        </div>
+        <div class="story-text">
+            <span class="sub-title">SCENERY</span>
+            <h2>時を忘れる、黄金の海</h2>
+            <p>全室オーシャンビューの客室からは、刻一刻と表情を変えるベイサイドの絶景が広がります。特に夕刻、水平線が黄金色に染まる瞬間は、言葉を失うほどの静寂と美しさに包まれます。</p>
+        </div>
+    </div>
+</section>
+
+<section class="story-section reverse fade-in">
+    <div class="story-container">
+        <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="料理">
+        </div>
+        <div class="story-text">
+            <span class="sub-title">CUISINE</span>
+            <h2>五感で味わう、北の恵み</h2>
+            <p>地元の漁港で揚がったばかりの魚介や、厳選された旬の素材。熟練のシェフが織りなす繊細なフレンチ・ジャポネは、一皿ごとに新しい驚きと感動をお届けします。</p>
+        </div>
+    </div>
+</section>
+
+<section class="story-section fade-in">
+    <div class="story-container">
+        <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" alt="スパ">
+        </div>
+        <div class="story-text">
+            <span class="sub-title">RELAXATION</span>
+            <h2>深い眠りと、癒やしの湯</h2>
+            <p>漆黒を基調とした静謐な空間。天然温泉の香りに包まれ、日々の疲れを解き放つ大浴場。心ゆくまでリラックスした後は、深い安らぎへと誘います。</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

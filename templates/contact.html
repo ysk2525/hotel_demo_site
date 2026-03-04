@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="contact-hero fade-in">
+    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1920&q=80" alt="ホテルの夜景">
+    <div class="hero-text">
+        <h2>ご要望を、承ります。</h2>
+    </div>
+</div>
+
+<section class="section fade-in">
+    <div class="contact-form-wrapper centered">
+        <div class="form-frame">
+            <span class="sub-title">INQUIRY FORM</span>
+            <h2>お問い合わせ</h2>
+            <p class="form-description">特別な日のご相談、アレルギーのご確認など、お気軽にお申し付けください。</p>
+
+            <form action="/contact" method="POST">
+                <div class="input-row">
+                    <div class="field-group">
+                        <label>お名前</label>
+                        <input type="text" name="name" placeholder="Noir 太郎" required>
+                    </div>
+                    <div class="field-group">
+                        <label>メールアドレス</label>
+                        <input type="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label>お問い合わせ項目</label>
+                    <select name="subject">
+                        <option value="宿泊について">ご宿泊について</option>
+                        <option value="お食事について">お食事・レストランについて</option>
+                        <option value="ウェディング・宴会">ウェディング・宴会について</option>
+                        <option value="その他">その他のお問い合わせ</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label>メッセージ</label>
+                    <textarea name="message" rows="6" placeholder="こちらにご記入ください"></textarea>
+                </div>
+
+                <div class="form-footer" style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn-gold">内容を送信する</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="contact-info-vertical">
+        <div class="info-item">
+            <span class="sub-title">ADDRESS</span>
+            <p>〒000-0000<br>架空県絶景市海辺の町 1-2-3</p>
+        </div>
+        <div class="info-item">
+            <span class="sub-title">PHONE</span>
+            <p>0120-XXX-XXX<br><small>受付時間：24時間年中無休</small></p>
+        </div>
+        <div class="info-item">
+            <span class="sub-title">EMAIL</span>
+            <p>concierge@hotel-noir.test</p>
+        </div>
+    </div>
+</section>
+
+<section class="map-section fade-in">
+    <div class="map-container-wrapper">
+        <div class="map-overlay">
+            <span class="sub-title">ACCESS</span>
+            <h2>【Fake】地図・アクセス</h2>
+            <p>日本最北の地、宗谷岬にほど近い、<br>静寂に包まれた高台に位置しております。【Fake】</p>
+            <div style="margin-top: 30px;">
+                <a href="https://maps.app.goo.gl/9ZpYfL6x5Y3qX5yG7" target="_blank" class="btn-gold-sm">Google Mapで開く</a>
+            </div>
+        </div>
+
+        <div class="google-map-frame">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.743142279183!2d141.93400577694116!3d45.522948629013695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f1041412fc49733%3A0xfb573b8643d8fb31!2z5a6X6LC35bKs!5e0!3m2!1sja!2sjp!4v1715820000000!5m2!1sja!2sjp" 
+                width="100%" 
+                height="600" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

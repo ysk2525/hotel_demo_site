@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="success-wrapper">
+    <div class="success-bg">
+        <img src="https://images.unsplash.com/photo-1542314831-c6a4d14b89e6?auto=format&fit=crop&w=1920&q=80" alt="優雅な空間">
+    </div>
+
+    <div class="success-content">
+        <span class="sub-title">THANK YOU</span>
+        
+        {% if request.args.get('type') == 'reserve' %}
+            <h2>ご予約、承りました。</h2>
+            <p class="success-message">
+                Hotel Noirへのご宿泊予約を賜り、誠にありがとうございます。<br>
+                日常の喧騒から離れ、漆黒の静寂に包まれるひととき。<br>
+                お客様のお越しを、スタッフ一同、心よりお待ち申し上げております。
+            </p>
+            <p class="success-note">※ご入力いただいたメールアドレス宛に、予約詳細をお送りいたしました。</p>
+        
+        {% else %}
+            <h2>お問い合わせを受け付けました。</h2>
+            <p class="success-message">
+                Hotel Noirへのお問い合わせ、誠にありがとうございます。<br>
+                コンシェルジュが内容を確認のうえ、順次ご案内申し上げます。<br>
+                今しばらくお待ちくださいませ。
+            </p>
+            <p class="success-note">※ご入力いただいたメールアドレス宛に、受付完了メールをお送りいたしました。</p>
+        {% endif %}
+
+        <div class="back-home-btn">
+            <a href="/" class="btn-gold">トップページへ戻る</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

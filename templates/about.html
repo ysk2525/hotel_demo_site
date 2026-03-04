@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="about-hero fade-in">
+    <img src="https://images.unsplash.com/photo-1541971875076-8f97cf8233be?auto=format&fit=crop&w=1920&q=80" alt="ホテルの外観">
+    <div class="hero-text">
+        <h2>伝統と、革新の結び目。</h2>
+    </div>
+</div>
+
+<section class="section fade-in">
+    <div class="about-message-container">
+        <div class="manager-portrait">
+    <img src="{{ url_for('static', filename='CEO.png') }}" alt="支配人 一条 誠">
+</div>
+
+        <div class="manager-message">
+            <span class="sub-title">MESSAGE</span>
+            <div class="vertical-text">
+                <p>
+                    漆黒の闇が、もっとも美しく輝く場所を求めて。<br>
+                    私たちが目指したのは、単なる宿泊施設ではありません。<br>
+                    それは、日常という喧騒を脱ぎ捨て、<br>
+                    本来の自分へと還るための「静寂の聖域」です。
+                </p>
+                <p>
+                    この地に宿る風土を敬い、<br>
+                    現代の洗練を織り交ぜる。<br>
+                    一つひとつのしつらえに、<br>
+                    目に見えないおもてなしを込めて。
+                </p>
+                <p>
+                    Hotel Noirへ、ようこそ。<br>
+                    こころゆくまで、優雅なひとときを。<br>
+                </p>
+            </div>
+            
+            <div class="signature">
+                <p>総支配人<span>一条 誠</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="story-section reverse fade-in">
+    <div class="story-container">
+        <div class="story-image">
+            <img src="{{ url_for('static', filename='int.png') }}" alt="こだわりの内装">
+        </div>
+        <div class="story-text">
+            <span class="sub-title">PHILOSOPHY</span>
+            <h2>影を愉しむ、美学。</h2>
+            <p>光があるから影があるのではなく、影があるからこそ光が際立つ。当ホテルでは「陰影礼賛」の精神を大切にしています。計算された照明、選び抜かれた漆黒の建材。視覚的な静寂が、あなたの感性を解き放ちます。</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
