@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Noir</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="/">HOTEL NOIR</a></h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/rooms">ROOMS</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="footer-logo">HOTEL NOIR</h2>
+                <p class="footer-tagline">静寂と、影の美学。</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <span class="sub-title">NAVIGATION</span>
+                    <ul>
+                        <li><a href="/">TOP</a></li>
+                        <li><a href="/rooms">客室一覧</a></li>
+                        <li><a href="/about">当ホテルの想い</a></li>
+                        <li><a href="/contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <span class="sub-title">SOCIAL</span>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 HOTEL NOIR. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="/reserve" class="floating-btn">RESERVE</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
