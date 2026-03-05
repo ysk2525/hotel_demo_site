@@ -252,4 +252,31 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
     .footer-links { flex-direction: column; gap: 40px; }
     .link-group { text-align: center; }
     .floating-btn { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.75rem; }
+
+}
+
+/* --- 客室一覧の画像サイズを強制統一 --- */
+
+/* 2列レイアウト（スイート・エグゼクティブ）の画像高さ */
+.room-img img {
+    width: 100%;
+    height: 450px; /* PCでの高さを450pxに統一 */
+    object-fit: cover; /* 画像を歪ませずに枠いっぱいに広げる */
+}
+
+/* 3列レイアウト（スタンダード）の画像高さ */
+.room-grid.triple .room-img img {
+    height: 300px; /* 3列の場合は少し低めにしてバランスを取る */
+}
+
+/* 📱 スマホ時の調整 */
+@media (max-width: 900px) {
+    .rooms-hero {
+        height: 60vh; /* 看板画像は画面の6割に */
+    }
+    
+    .room-img img, 
+    .room-grid.triple .room-img img {
+        height: 350px; /* スマホは1列になるので、すべての画像の高さを350pxに揃える */
+    }
 }
