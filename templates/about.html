@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="about-hero fade-in">
-    <img src="https://images.unsplash.com/photo-1541971875076-8f97cf8233be?auto=format&fit=crop&w=1920&q=80" alt="ホテルの外観">
+    <img src="{{ url_for('static', filename='hotelout.png') }}" alt="ホテルの外観">
     <div class="hero-text">
         <h2>伝統と、革新の結び目。</h2>
     </div>
@@ -54,5 +54,6 @@
         </div>
     </div>
 </section>
+
 
 {% endblock %}
